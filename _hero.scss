@@ -42,6 +42,13 @@
         z-index: 99;
         font-family:'Rubik-normal', sans-serif;
 
+        .logo{
+            transition: transform 0.3s ease;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        
         ul {
             display: flex;
             list-style: none;
@@ -55,6 +62,10 @@
 
                 &:hover {
                     color: color.adjust(variables.$text-dark, $lightness: 20%);
+                    text-decoration: underline;
+                    background: rgba(0,0,0,0.1);
+                    padding: 5px;
+                    border-radius: 10px;
                 }
             }
         }
@@ -142,6 +153,10 @@
             .store-button img {
                 height: 45px;
                 display: block;
+                transition: transform 0.3s ease;
+                &:hover{
+                    transform: translateY(-10px);
+                }
             }
         }
 

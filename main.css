@@ -39,6 +39,12 @@
   z-index: 99;
   font-family: "Rubik-normal", sans-serif;
 }
+.hero .nav .logo {
+  transition: transform 0.3s ease;
+}
+.hero .nav .logo:hover {
+  transform: scale(1.2);
+}
 .hero .nav ul {
   display: flex;
   list-style: none;
@@ -52,6 +58,10 @@
 }
 .hero .nav ul a:hover {
   color: rgb(56.4827586207, 58.6551724138, 132.5172413793);
+  text-decoration: underline;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 10px;
 }
 .hero .nav {
   /* TABLET */
@@ -135,6 +145,10 @@
 .hero__text .buttons .store-button img {
   height: 45px;
   display: block;
+  transition: transform 0.3s ease;
+}
+.hero__text .buttons .store-button img:hover {
+  transform: translateY(-10px);
 }
 @media (max-width: 1024px) {
   .hero__text {
@@ -380,7 +394,7 @@
   height: 35px;
   filter: grayscale(0);
   opacity: 0.9;
-  transition: opacity 0.3s;
+  transition: all 0.3s;
 }
 @media (max-width: 768px) {
   .social-proof__logos img {
@@ -389,6 +403,10 @@
 }
 .social-proof__logos img:hover {
   opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  border-radius: 10px;
+  transform: scale(1.8);
 }
 
 .needs {
