@@ -11,6 +11,7 @@
             margin-bottom: 15px; 
         }
         p { 
+            font-family: 'Rubik-normal', sans-serif;
             color: $text-gray; 
             max-width: 650px; 
             margin: 0 auto; 
@@ -56,16 +57,19 @@
 
     &__footer {
         h3 { 
+            font-family:'Nunito-Bold', sans-serif;
             font-size: 2rem; 
             color: $text-dark; 
             margin-bottom: 10px; 
         }
         p { 
+            font-family: 'Rubik-normal', sans-serif;
             color: $text-gray; 
             margin-bottom: 30px; 
         }
         
         .btn--primary {
+            font-family: 'Rubik-normal', sans-serif;
             background-color: $primary-blue;
             color: white;
             padding: 15px 40px;

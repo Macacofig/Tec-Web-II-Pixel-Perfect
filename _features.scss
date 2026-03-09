@@ -6,7 +6,7 @@
 
     .mancha-left{
         position: absolute;
-        top: 30%;
+        top: 24%;
         right: 80%;
         height: 140%;
         object-fit: contain;
@@ -23,10 +23,11 @@
             font-size: 2.5rem;
             color: $text-dark;
             margin-bottom: 20px;
+            font-family:'Nunito-Bold', sans-serif;
         }
 
         p {
-            font-family: Rubik;
+            font-family:'Rubik-normal', sans-serif;
             color: $text-dark;
         }
     }
@@ -55,10 +56,11 @@
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: $text-dark;
+            font-family:'Nunito-Bold', sans-serif;
         }
 
         p {
-            font-family: Rubik;
+            font-family:'Rubik-normal', sans-serif;
             color: $text-dark;
             font-size: 0.9rem;
             line-height: 1.6;

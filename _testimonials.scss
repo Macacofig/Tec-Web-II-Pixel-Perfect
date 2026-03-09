@@ -1,19 +1,19 @@
 .testimonials {
     padding: 100px 0;
-    background-color: #fff; // Fondo limpio para resaltar el texto
+    background-color: #fff; 
 
     &__container {
         display: flex;
-        max-width: $container-max-width; // Usa tu variable global
+        max-width: $container-max-width; 
         margin: 0 auto;
         padding: 0 20px;
-        gap: 100px; // Separación horizontal entre el texto y la lista de personas
+        gap: 100px; 
         align-items: flex-start;
     }
 
     &__info {
         flex: 1;
-        position: sticky; // El texto te sigue mientras bajas por los testimonios
+        position: sticky; 
         top: 120px;
 
         h2 {
@@ -24,6 +24,7 @@
         }
 
         p {
+            font-family: 'Rubik-normal', sans-serif;
             color: $text-gray;
             font-size: 1.1rem;
             line-height: 1.6;
@@ -44,6 +45,7 @@
                 font-weight: 600;
                 cursor: pointer;
                 transition: 0.3s;
+                font-family: 'Rubik-normal', sans-serif;
 
                 &:hover {
                     background: $primary-blue;
@@ -56,6 +58,7 @@
                 color: $text-dark;
                 font-weight: 700;
                 font-size: 1rem;
+                font-family: 'Rubik-normal', sans-serif;
             }
         }
     }
@@ -69,24 +72,24 @@
 
     .testimonial-card {
         padding: 35px;
-        border: 1.5px solid #f0f0f0; // Borde sutil para todas
+        border: 1.5px solid #f0f0f0; 
         border-radius: 12px;
         background: #fff;
         transition: transform 0.3s ease;
 
-        // Estilo para la primera tarjeta (Jenny Wilson) según la foto
         &.featured {
             border-color: #FFBDAD; 
             box-shadow: 0 10px 30px rgba(255, 189, 173, 0.1);
         }
 
         .stars {
-            color: #FF9F43; // Color naranja para las estrellas
+            color: #FF9F43; 
             font-size: 1.2rem;
             margin-bottom: 15px;
         }
 
         p {
+            font-family: 'Rubik-normal', sans-serif;
             font-size: 1rem;
             color: #444;
             line-height: 1.5;
@@ -102,7 +105,7 @@
                 width: 55px;
                 height: 55px;
                 border-radius: 50%;
-                object-fit: cover; // Evita que las fotos de los 4 se deformen
+                object-fit: cover; 
             }
 
             .user-info {

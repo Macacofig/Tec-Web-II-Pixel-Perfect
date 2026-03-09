@@ -50,9 +50,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 100px;
+  padding: 30px 80px;
   position: relative;
   z-index: 99;
+  font-family: "Rubik-normal", sans-serif;
 }
 .hero .nav ul {
   display: flex;
@@ -85,7 +86,7 @@ body {
   margin-bottom: 20px;
 }
 .hero__text p {
-  font-family: Rubik;
+  font-family: "Rubik-normal", sans-serif;
   color: #666;
   font-size: 1rem;
   line-height: 1.6;
@@ -119,7 +120,7 @@ body {
 }
 .features .mancha-left {
   position: absolute;
-  top: 30%;
+  top: 24%;
   right: 80%;
   height: 140%;
   object-fit: contain;
@@ -135,9 +136,10 @@ body {
   font-size: 2.5rem;
   color: #1a1b3d;
   margin-bottom: 20px;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .features__header p {
-  font-family: Rubik;
+  font-family: "Rubik-normal", sans-serif;
   color: #1a1b3d;
 }
 .features__grid {
@@ -162,9 +164,10 @@ body {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #1a1b3d;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .features__item p {
-  font-family: Rubik;
+  font-family: "Rubik-normal", sans-serif;
   color: #1a1b3d;
   font-size: 0.9rem;
   line-height: 1.6;
@@ -183,6 +186,7 @@ body {
   color: #666;
   font-size: 0.9rem;
   margin-bottom: 40px;
+  font-family: "Rubik-normal", sans-serif;
 }
 .social-proof__logos {
   display: flex;
@@ -233,10 +237,12 @@ body {
   font-size: 2.5rem;
   color: #1a1b3d;
   margin-bottom: 20px;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .needs__content p.main-desc {
   color: #666;
   margin-bottom: 40px;
+  font-family: "Rubik-normal", sans-serif;
 }
 .needs__item {
   display: flex;
@@ -272,11 +278,13 @@ body {
   font-size: 1.1rem;
   color: #1a1b3d;
   margin-bottom: 5px;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .needs__item .text p {
   font-size: 0.9rem;
   color: #666;
   line-height: 1.5;
+  font-family: "Rubik-normal", sans-serif;
 }
 .needs .mano2 {
   width: 70%;
@@ -307,8 +315,10 @@ body {
   font-size: 1.1rem;
   margin-bottom: 10px;
   font-weight: 500;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .stats__item h2 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 3.5rem;
   font-weight: 700;
   margin: 0;
@@ -325,12 +335,14 @@ body {
 .screenshots__header h2 {
   font-size: 2.5rem;
   color: #1a1b3d;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .screenshots__header p {
   color: #666;
   max-width: 600px;
   margin: 10px auto;
   padding: 20px;
+  font-family: "Rubik-normal", sans-serif;
 }
 .screenshots__slider {
   display: flex;
@@ -376,16 +388,19 @@ body {
   margin-bottom: 60px;
 }
 .pricing__header h2 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 2.5rem;
   color: #1a1b3d;
   margin-bottom: 10px;
 }
 .pricing__header p {
+  font-family: "Rubik-normal", sans-serif;
   color: #666;
   max-width: 600px;
   margin: 0 auto 30px;
 }
 .pricing .toggle-container {
+  font-family: "Rubik-normal", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -449,6 +464,14 @@ body {
   text-align: left;
   transition: transform 0.3s ease;
 }
+.pricing .card h4 {
+  font-size: 24px;
+  font-family: "Nunito-Bold", sans-serif;
+}
+.pricing .card p {
+  font-family: "Rubik-normal", sans-serif;
+  font-size: 16px;
+}
 .pricing .card--featured {
   background: #007bff;
   color: #ffffff;
@@ -467,8 +490,10 @@ body {
   font-size: 3rem;
   font-weight: 700;
   margin: 20px 0;
+  font-family: "Nunito-Bold", sans-serif;
 }
 .pricing .card .price span {
+  font-family: "Rubik-normal", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   opacity: 0.8;
@@ -483,6 +508,8 @@ body {
   font-weight: 600;
   margin-bottom: 30px;
   cursor: pointer;
+  font-size: 21.33px;
+  font-family: "Rubik-normal", sans-serif;
 }
 .pricing .card .text-left {
   width: 100%;
@@ -533,6 +560,7 @@ body {
   margin-bottom: 25px;
 }
 .testimonials__info p {
+  font-family: "Rubik-normal", sans-serif;
   color: #666;
   font-size: 1.1rem;
   line-height: 1.6;
@@ -552,6 +580,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
+  font-family: "Rubik-normal", sans-serif;
 }
 .testimonials__info .testimonials__actions .btn--outline:hover {
   background: #007bff;
@@ -562,6 +591,7 @@ body {
   color: #1a1b3d;
   font-weight: 700;
   font-size: 1rem;
+  font-family: "Rubik-normal", sans-serif;
 }
 .testimonials__list {
   flex: 1.2;
@@ -586,6 +616,7 @@ body {
   margin-bottom: 15px;
 }
 .testimonials .testimonial-card p {
+  font-family: "Rubik-normal", sans-serif;
   font-size: 1rem;
   color: #444;
   line-height: 1.5;
@@ -626,6 +657,7 @@ body {
   margin-bottom: 15px;
 }
 .faq__header p {
+  font-family: "Rubik-normal", sans-serif;
   color: #666;
   max-width: 650px;
   margin: 0 auto;
@@ -663,15 +695,18 @@ body {
   background-color: rgba(0, 123, 255, 0.02);
 }
 .faq__footer h3 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 2rem;
   color: #1a1b3d;
   margin-bottom: 10px;
 }
 .faq__footer p {
+  font-family: "Rubik-normal", sans-serif;
   color: #666;
   margin-bottom: 30px;
 }
 .faq__footer .btn--primary {
+  font-family: "Rubik-normal", sans-serif;
   background-color: #007bff;
   color: white;
   padding: 15px 40px;
@@ -696,15 +731,17 @@ body {
   max-width: 600px;
 }
 .cta-final__content h2 {
-  font-size: 3.5rem;
+  font-family: "Nunito-Bold", sans-serif;
+  font-size: 3.3rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 9px;
 }
 .cta-final__content p {
+  font-family: "Rubik-normal", sans-serif;
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 50px;
+  margin-bottom: 37px;
   opacity: 0.9;
 }
 .cta-final__buttons {
@@ -767,12 +804,14 @@ body {
   gap: 40px;
 }
 .footer__col h4 {
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 1.1rem;
   margin-bottom: 25px;
   color: #fff;
   text-transform: capitalize;
 }
 .footer__col p {
+  font-family: "Rubik-normal", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   line-height: 1.6;
   margin-bottom: 25px;
