@@ -1,3 +1,7 @@
+@use 'mixins';
+@use 'variables';
+@use 'sass:color';
+
 .footer {
     background: #0E1133; 
     color: #fff;
@@ -5,7 +9,7 @@
     margin-top: -555px;
 
     &__container {
-        max-width: $container-max-width;
+        max-width: variables.$container-max-width;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -32,6 +36,10 @@
             border-radius: 6px;
             font-weight: 600;
             cursor: pointer;
+
+            &:hover {
+                background-color: color.adjust(#ffffff, $lightness: -8%);
+            }
         }
     }
 
@@ -43,11 +51,12 @@
 
     &__grid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1fr; // La primera columna es más ancha
+        grid-template-columns: 2fr 1fr 1fr 1fr;
         gap: 40px;
     }
 
     &__col {
+
         h4 {
             font-family:'Nunito-Bold', sans-serif;
             font-size: 1.1rem;
@@ -67,16 +76,19 @@
         ul {
             list-style: none;
             padding: 0;
+
             li {
                 margin-bottom: 15px;
+
                 a {
                     font-family: 'PlusJakartaSans-bold', sans-serif;
                     color: rgba(255, 255, 255, 0.7);
                     text-decoration: none;
                     transition: color 0.3s;
                     font-size: 12px;
+
                     &:hover { 
-                        color: $primary-blue; 
+                        color: variables.$primary-blue; 
                     }
                 }
             }
@@ -85,16 +97,84 @@
         .social-icons {
             display: flex;
             gap: 15px;
+
             a {
                 font-family: 'PlusJakartaSans-bold', sans-serif;
                 color: #fff;
                 opacity: 0.8;
                 font-size: 12px;
+
                 &:hover { 
                     opacity: 1; 
-                    color: $primary-blue; 
+                    color: variables.$primary-blue; 
                 }
             }
+        }
+    }
+
+    /* TABLET */
+    @include mixins.respond-to(tablet) {
+
+        margin-top: -250px;
+
+        &__cta {
+            flex-direction: column;
+            text-align: center;
+            gap: 25px;
+
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 30px;
+        }
+    }
+
+    /* MOBILE */
+    @include mixins.respond-to(mobile) {
+
+        margin-top: -120px;
+        padding: 60px 0;
+
+        &__cta {
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .btn--white {
+                padding: 12px 28px;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 35px;
+            text-align: center;
+        }
+
+        &__col {
+
+            ul li {
+                margin-bottom: 12px;
+            }
+
+            .social-icons {
+                justify-content: center;
+            }
+        }
+    }
+
+    /* MOBILE PEQUEÑO */
+    @include mixins.respond-to(mobile-sm) {
+
+        margin-top: -60px;
+
+        &__cta h2 {
+            font-size: 1.6rem;
         }
     }
 }

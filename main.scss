@@ -1,4 +1,15 @@
-@import 'variables';
+@use 'variables';
+@use 'hero';
+@use 'features';
+@use 'social-proof';
+@use 'needs';
+@use 'stats';
+@use 'screenshots'; 
+@use 'pricing';
+@use 'testimonials';
+@use 'faq';
+@use 'cta-final';
+@use 'footer';
 
 * {
     margin: 0;
@@ -6,20 +17,10 @@
     box-sizing: border-box;
 }
 body{
-    background-color: $white;
+    background-color: variables.$white;
 }
-@import 'hero';
-@import 'features';
-@import 'social-proof';
-@import 'needs';
-@import 'stats';
-@import 'screenshots'; 
-@import 'pricing';
-@import 'testimonials';
-@import 'faq';
-@import 'cta-final';
+
 .persona{
     transform: translate(630px, -550px);
     height: 550px;
 }
-@import 'footer';

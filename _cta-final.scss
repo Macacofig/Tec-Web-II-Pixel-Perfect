@@ -1,11 +1,15 @@
+@use 'mixins';
+@use 'variables';
+@use 'sass:color';
+
 .cta-final {
     padding: 50px 0;
-    background-color: $primary-blue; 
-    color: $white;
+    background-color: variables.$primary-blue; 
+    color: variables.$white;
     text-align: left;
 
     &__container {
-        max-width: $container-max-width;
+        max-width: variables.$container-max-width;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -43,6 +47,74 @@
                 &:hover {
                     transform: translateY(-5px); 
                 }
+            }
+        }
+    }
+
+    /* TABLET */
+    @include mixins.respond-to(tablet) {
+        text-align: center;
+
+        &__content {
+            margin: 0 auto;
+
+            h2 {
+                font-size: 2.6rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+
+        &__buttons {
+            justify-content: center;
+        }
+    }
+
+    /* MOBILE */
+    @include mixins.respond-to(mobile) {
+        padding: 40px 0;
+
+        &__content {
+            h2 {
+                font-size: 2.1rem;
+                line-height: 1.2;
+            }
+
+            p {
+                font-size: 0.95rem;
+                margin-bottom: 25px;
+            }
+        }
+
+        &__buttons {
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+
+            .store-btn img {
+                height: 38px;
+            }
+        }
+    }
+
+    /* MOBILE PEQUEÑO */
+    @include mixins.respond-to(mobile-sm) {
+
+        &__content {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__buttons {
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+
+            .store-btn img {
+                height: 36px;
             }
         }
     }

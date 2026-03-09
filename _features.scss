@@ -1,3 +1,7 @@
+@use 'mixins';
+@use 'variables';
+@use 'sass:color';
+
 .features {
     position: relative;
     padding: 0px 0;
@@ -12,6 +16,15 @@
         object-fit: contain;
         z-index: -1;
         transform: translate(230px, -132px);
+
+        @include mixins.respond-to(tablet) {
+            transform: translate(150px, -80px);
+            opacity: 0.6;
+        }
+
+        @include mixins.respond-to(mobile) {
+            display: none;
+        }
     }
 
     &__header {
@@ -20,14 +33,14 @@
 
         h2 {
             font-size: 2.5rem;
-            color: $text-dark;
+            color: variables.$text-dark;
             margin-bottom: 20px;
             font-family:'Nunito-Bold', sans-serif;
         }
 
         p {
             font-family:'Rubik-normal', sans-serif;
-            color: $text-dark;
+            color: variables.$text-dark;
         }
     }
 
@@ -35,7 +48,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
-        max-width: $container-max-width;
+        max-width: variables.$container-max-width;
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -54,20 +67,92 @@
         h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: $text-dark;
+            color: variables.$text-dark;
             font-family:'Nunito-Bold', sans-serif;
         }
 
         p {
             font-family:'Rubik-normal', sans-serif;
-            color: $text-dark;
+            color: variables.$text-dark;
             font-size: 0.9rem;
             line-height: 1.6;
         }
+
         &:first-child {
             h3, p {
-                color: $white;
+                color: variables.$white;
             }
+        }
+    }
+
+    /* TABLET */
+    @include mixins.respond-to(tablet) {
+
+        margin-top: -120px;
+
+        &__header {
+            h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+    }
+
+    /* MOBILE */
+    @include mixins.respond-to(mobile) {
+
+        margin-top: -60px;
+
+        &__header {
+            margin-bottom: 40px;
+
+            h2 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
+        }
+
+        &__grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        &__item {
+            padding: 30px 15px;
+            img {
+                width: 55px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+                color:black;
+            }
+
+            p {
+                font-size: 0.9rem;
+                color:black;
+            }
+        }
+    }
+
+    /* MOBILE PEQUEÑO */
+    @include mixins.respond-to(mobile-sm) {
+
+        margin-top: -30px;
+
+        &__header h2 {
+            font-size: 1.7rem;
+        }
+
+        &__item {
+            padding: 25px 10px;
         }
     }
 }
