@@ -8,6 +8,24 @@ body {
   background-color: #ffffff;
 }
 
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("./fonts/static/Nunito-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-normal";
+  src: url("./fonts/static/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-medium";
+  src: url("./fonts/static/Rubik-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .hero {
   position: relative;
   width: 100%;
@@ -60,7 +78,7 @@ body {
   transform: translate(120px, -180px);
 }
 .hero__text h1 {
-  font-family: Nunito;
+  font-family: "Nunito-Bold", sans-serif;
   font-size: 3rem;
   color: #1a1b3d;
   line-height: 1.2;
