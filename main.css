@@ -21,7 +21,7 @@
 }
 @media (max-width: 768px) {
   .hero .manchas {
-    transform: translate(50px, -65px) rotate(0deg) scale(0.8);
+    transform: translate(90px, -74px) rotate(0deg) scale(0.8);
     opacity: 0.4;
   }
 }
@@ -236,14 +236,14 @@
 }
 @media (max-width: 768px) {
   .features .mancha-left {
-    transform: translate(750px, -173px) scale(0.8);
+    transform: translate(745px, -261px) scale(0.7);
     top: 20px;
     opacity: 0.4;
   }
 }
 @media (max-width: 480px) {
   .features .mancha-left {
-    transform: translate(671px, -308px) scale(0.5);
+    transform: translate(632px, -308px) scale(0.5);
     opacity: 0.4;
   }
 }
@@ -1532,7 +1532,7 @@
 }
 @media (max-width: 768px) {
   .footer {
-    margin-top: -555px;
+    margin-top: -313px;
     padding: 60px 0;
   }
   .footer__cta h2 {
@@ -1558,7 +1558,7 @@
 }
 @media (max-width: 480px) {
   .footer {
-    margin-top: -555px;
+    margin-top: -15px;
   }
   .footer__cta h2 {
     font-size: 1.6rem;
@@ -1592,7 +1592,7 @@ body {
 }
 @media (max-width: 768px) {
   .persona {
-    transform: translate(50px, -150px);
+    transform: translate(370px, -415px);
     height: 300px;
   }
 }
@@ -1601,8 +1601,7 @@ body {
 }
 @media (max-width: 480px) {
   .persona {
-    transform: translate(0px, -100px);
-    height: 250px;
+    display: none;
   }
 }
 

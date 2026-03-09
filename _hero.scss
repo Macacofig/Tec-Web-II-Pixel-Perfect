@@ -23,7 +23,7 @@
         }
 
         @include mixins.respond-to(mobile) {
-            transform: translate(50px, -65px) rotate(0deg) scale(0.8);
+            transform: translate(90px, -74px) rotate(0deg) scale(0.8);
             opacity: 0.4; 
         }
 
