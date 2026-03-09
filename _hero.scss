@@ -1,0 +1,96 @@
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    padding-bottom: 0;
+    .manchas {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%; 
+        z-index: -1;
+        transform: translate(280px, -210px)rotate(-15deg);
+    }
+
+    .container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 100px;
+        position: relative;
+        z-index: 99;
+        
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-weight: 500;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: lighten($text-dark, 20%);
+                }
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    &__text {
+        flex: 1;
+        transform: translate(120px, -180px);
+        h1 {
+            font-family: Nunito;
+            font-size: 3rem;
+            color: $text-dark;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-family: Rubik;
+            color: $text-gray;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+
+            .store-button img {
+                height: 45px;
+                display: block;
+            }
+        }
+    }
+
+    &__image {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transform: translate(120px, -40px) scale(1.3); 
+        }
+    }
+}

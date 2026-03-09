@@ -1,0 +1,121 @@
+.testimonials {
+    padding: 100px 0;
+    background-color: #fff; // Fondo limpio para resaltar el texto
+
+    &__container {
+        display: flex;
+        max-width: $container-max-width; // Usa tu variable global
+        margin: 0 auto;
+        padding: 0 20px;
+        gap: 100px; // Separación horizontal entre el texto y la lista de personas
+        align-items: flex-start;
+    }
+
+    &__info {
+        flex: 1;
+        position: sticky; // El texto te sigue mientras bajas por los testimonios
+        top: 120px;
+
+        h2 {
+            font-size: 3.2rem;
+            color: $text-dark;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: $text-gray;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .testimonials__actions {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+
+            .btn--outline {
+                padding: 15px 30px;
+                border: 1px solid $primary-blue;
+                color: $primary-blue;
+                background: transparent;
+                border-radius: 6px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    background: $primary-blue;
+                    color: white;
+                }
+            }
+
+            .link-all {
+                text-decoration: none;
+                color: $text-dark;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__list {
+        flex: 1.2;
+        display: flex;
+        flex-direction: column;
+        gap: 32px; // Separación vertical constante entre las 4 tarjetas
+    }
+
+    .testimonial-card {
+        padding: 35px;
+        border: 1.5px solid #f0f0f0; // Borde sutil para todas
+        border-radius: 12px;
+        background: #fff;
+        transition: transform 0.3s ease;
+
+        // Estilo para la primera tarjeta (Jenny Wilson) según la foto
+        &.featured {
+            border-color: #FFBDAD; 
+            box-shadow: 0 10px 30px rgba(255, 189, 173, 0.1);
+        }
+
+        .stars {
+            color: #FF9F43; // Color naranja para las estrellas
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #444;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            img {
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                object-fit: cover; // Evita que las fotos de los 4 se deformen
+            }
+
+            .user-info {
+                strong {
+                    display: block;
+                    font-size: 1.05rem;
+                    color: $text-dark;
+                }
+                span {
+                    font-size: 0.85rem;
+                    color: $text-gray;
+                }
+            }
+        }
+    }
+}

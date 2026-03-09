@@ -1,0 +1,47 @@
+.cta-final {
+    padding: 50px 0;
+    background-color: $primary-blue; 
+    color: $white;
+    text-align: left;
+
+    &__container {
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    &__content {
+        max-width: 600px; 
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 30px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 20px;
+
+        .store-btn {
+            img {
+                height: 40px; 
+                width: auto;
+                transition: transform 0.3s ease;
+                
+                &:hover {
+                    transform: translateY(-5px); 
+                }
+            }
+        }
+    }
+}

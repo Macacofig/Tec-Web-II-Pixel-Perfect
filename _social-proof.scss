@@ -1,0 +1,34 @@
+.social-proof {
+    padding: 60px 0;
+    text-align: center;
+    background-color: $white;
+    margin-top: 177px;
+
+    p {
+        color: $text-gray;
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+        flex-wrap: wrap;
+        gap: 50px;
+        max-width: $container-max-width;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        img {
+            height: 35px; 
+            filter: grayscale(0); 
+            opacity: 0.9;
+            transition: opacity 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

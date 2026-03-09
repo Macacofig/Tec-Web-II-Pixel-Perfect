@@ -1,0 +1,57 @@
+.screenshots {
+    padding: 80px 0;
+    text-align: center;
+    background-color: $white;
+
+    &__header {
+        margin-bottom: 50px;
+        h2 { 
+            font-size: 2.5rem; 
+            color: $text-dark; 
+        }
+        p { 
+            color: $text-gray; 
+            max-width: 600px; 
+            margin: 10px auto; 
+            padding: 20px;
+        }
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        overflow: hidden;
+
+        .phone {
+            width: 250px; 
+            transition: all 0.3s ease;
+
+            &.side {
+                transform: scale(1); 
+            }
+
+            &.center {
+                width: 280px; 
+                z-index: 2;
+                transform: scale(1);
+                filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1)); 
+            }
+        }
+    }
+
+    &__dots {
+        margin-top: 40px;
+        .dot {
+            height: 12px;
+            width: 12px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 5px;
+            
+            &.active { background-color: $primary-blue; }
+        }
+    }
+}
