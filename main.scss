@@ -10,6 +10,7 @@
 @use 'faq';
 @use 'cta-final';
 @use 'footer';
+@use 'mixins';
 
 * {
     margin: 0;
@@ -20,7 +21,27 @@ body{
     background-color: variables.$white;
 }
 
-.persona{
+.persona {
+   
     transform: translate(630px, -550px);
     height: 550px;
+    overflow: hidden; 
+
+    /* TABLET */
+    @include mixins.respond-to(tablet) {
+        transform: translate(469px, -500px);
+        height: 400px;
+    }
+
+    /* MOBILE */
+    @include mixins.respond-to(mobile) {
+        transform: translate(50px, -150px);
+        height: 300px;
+    }
+
+    /* MOBILE PEQUEÑO */
+    @include mixins.respond-to(mobile-sm) {
+        transform: translate(0px, -100px);
+        height: 250px;
+    }
 }

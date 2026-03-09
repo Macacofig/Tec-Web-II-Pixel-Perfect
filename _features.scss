@@ -18,8 +18,7 @@
         transform: translate(230px, -132px);
 
         @include mixins.respond-to(tablet) {
-            transform: translate(150px, -80px);
-            opacity: 0.6;
+            transform: translate(426px, -324px) scale(0.7);
         }
 
         @include mixins.respond-to(mobile) {

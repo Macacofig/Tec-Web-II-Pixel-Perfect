@@ -217,8 +217,7 @@
 }
 @media (max-width: 1024px) {
   .features .mancha-left {
-    transform: translate(150px, -80px);
-    opacity: 0.6;
+    transform: translate(426px, -324px) scale(0.7);
   }
 }
 @media (max-width: 768px) {
@@ -433,7 +432,6 @@
 @media (max-width: 1024px) {
   .needs .mancha-right {
     transform: translate(20px, -10px);
-    opacity: 0.6;
   }
 }
 @media (max-width: 768px) {
@@ -985,19 +983,21 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 40px;
   gap: 100px;
   align-items: flex-start;
 }
 @media (max-width: 1024px) {
   .testimonials__container {
     gap: 60px;
+    padding: 0 30px;
   }
 }
 @media (max-width: 768px) {
   .testimonials__container {
     flex-direction: column;
     gap: 50px;
+    padding: 0 20px;
   }
 }
 .testimonials__info {
@@ -1005,9 +1005,17 @@
   position: sticky;
   top: 120px;
 }
+@media (max-width: 1024px) {
+  .testimonials__info {
+    margin-left: 50px;
+    max-width: 500px;
+  }
+}
 @media (max-width: 768px) {
   .testimonials__info {
     position: static;
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 .testimonials__info h2 {
@@ -1336,7 +1344,7 @@
     text-align: center;
   }
   .cta-final__content {
-    margin: 0 auto;
+    margin: 0 10px;
   }
   .cta-final__content h2 {
     font-size: 2.6rem;
@@ -1485,7 +1493,7 @@
 }
 @media (max-width: 1024px) {
   .footer {
-    margin-top: -250px;
+    margin-top: -408px;
   }
   .footer__cta {
     flex-direction: column;
@@ -1498,6 +1506,7 @@
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
+    text-align: center;
   }
 }
 .footer {
@@ -1551,6 +1560,32 @@ body {
 .persona {
   transform: translate(630px, -550px);
   height: 550px;
+  overflow: hidden;
+  /* TABLET */
+}
+@media (max-width: 1024px) {
+  .persona {
+    transform: translate(469px, -500px);
+    height: 400px;
+  }
+}
+.persona {
+  /* MOBILE */
+}
+@media (max-width: 768px) {
+  .persona {
+    transform: translate(50px, -150px);
+    height: 300px;
+  }
+}
+.persona {
+  /* MOBILE PEQUEÑO */
+}
+@media (max-width: 480px) {
+  .persona {
+    transform: translate(0px, -100px);
+    height: 250px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -115,7 +115,7 @@
     /* TABLET */
     @include mixins.respond-to(tablet) {
 
-        margin-top: -250px;
+        margin-top: -408px;
 
         &__cta {
             flex-direction: column;
@@ -130,6 +130,7 @@
         &__grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 40px 30px;
+            text-align: center;
         }
     }
 

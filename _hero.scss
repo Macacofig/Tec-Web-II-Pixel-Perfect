@@ -92,7 +92,7 @@
 
             a {
                 font-size: 0.9rem;
-                padding: 5px 0; // Área de clic más grande
+                padding: 5px 0; 
             }
         }
 
@@ -112,19 +112,18 @@
         display: flex;
         align-items: center;
         padding-top: 60px;
-        gap: 40px; // Añadido gap para separar texto e imagen en desktop
+        gap: 40px; 
 
         @include mixins.respond-to(tablet) {
             flex-direction: column;
             text-align: center;
             gap: 30px;
-            padding-top: 40px; // Reducir padding en tablet
+            padding-top: 40px; 
         }
     }
 
     &__text {
         flex: 1;
-        // Desktop: transform original
         transform: translate(120px, -180px);
 
         h1 {
@@ -155,8 +154,8 @@
         }
 
         @include mixins.respond-to(tablet) {
-            transform: none; // Quitar transform para centrar
-            max-width: 100%; // Ocupar todo el ancho disponible
+            transform: none; 
+            max-width: 100%; 
             margin: 0 auto;
 
             h1 {
@@ -183,7 +182,7 @@
 
         @include mixins.respond-to(mobile-sm) {
             h1 {
-                font-size: 1.75rem; // Ajuste para pantallas muy pequeñas
+                font-size: 1.75rem; 
             }
             
             p {
@@ -205,17 +204,12 @@
 
         @include mixins.respond-to(tablet) {
             justify-content: center;
-            
-            // Usamos display: none en lugar de visibility: hidden
-            // para que el texto no tenga que "hacer espacio" para la imagen oculta
             img {
                 display: none; 
             }
         }
 
         @include mixins.respond-to(mobile) {
-            // En móvil, si la imagen se oculta, el texto debe ocupar el 100%
-            // Esto se logra automáticamente si &__text tiene max-width: 100% en tablet
             img {
                 display: none;
             }
