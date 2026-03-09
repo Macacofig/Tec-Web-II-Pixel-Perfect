@@ -26,6 +26,18 @@ body {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./fonts/static/Roboto-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PlusJakartaSans-Bold";
+  src: url("./fonts/static/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .hero {
   position: relative;
   width: 100%;
@@ -554,6 +566,7 @@ body {
   top: 120px;
 }
 .testimonials__info h2 {
+  font-family: "Roboto-normal", sans-serif;
   font-size: 3.2rem;
   color: #1a1b3d;
   line-height: 1.1;
@@ -652,6 +665,7 @@ body {
   margin-bottom: 60px;
 }
 .faq__header h2 {
+  font-family: "Roboto-normal", sans-serif;
   font-size: 2.8rem;
   color: #1a1b3d;
   margin-bottom: 15px;
@@ -681,6 +695,7 @@ body {
   transition: all 0.3s ease;
 }
 .faq__item span {
+  font-family: "Roboto-normal", sans-serif;
   font-weight: 600;
   color: #1a1b3d;
   font-size: 1rem;
@@ -758,7 +773,7 @@ body {
 }
 
 .persona {
-  transform: translate(600px, -550px);
+  transform: translate(630px, -550px);
   height: 550px;
 }
 
@@ -780,11 +795,13 @@ body {
   margin-bottom: 60px;
 }
 .footer__cta h2 {
+  font-family: "PlusJakartaSans-bold", sans-serif;
   font-size: 2.8rem;
   font-weight: 700;
   line-height: 1.2;
 }
 .footer__cta .btn--white {
+  font-family: "Rubik-normal", sans-serif;
   background-color: #fff;
   color: #000;
   padding: 15px 35px;
@@ -825,9 +842,11 @@ body {
   margin-bottom: 15px;
 }
 .footer__col ul li a {
+  font-family: "PlusJakartaSans-bold", sans-serif;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 12px;
 }
 .footer__col ul li a:hover {
   color: #007bff;
@@ -837,9 +856,10 @@ body {
   gap: 15px;
 }
 .footer__col .social-icons a {
+  font-family: "PlusJakartaSans-bold", sans-serif;
   color: #fff;
-  font-size: 1.2rem;
   opacity: 0.8;
+  font-size: 12px;
 }
 .footer__col .social-icons a:hover {
   opacity: 1;
