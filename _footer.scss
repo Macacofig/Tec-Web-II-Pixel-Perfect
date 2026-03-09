@@ -136,7 +136,7 @@
     /* MOBILE */
     @include mixins.respond-to(mobile) {
 
-        margin-top: -120px;
+        margin-top: -555px;
         padding: 60px 0;
 
         &__cta {
@@ -171,7 +171,7 @@
     /* MOBILE PEQUEÑO */
     @include mixins.respond-to(mobile-sm) {
 
-        margin-top: -60px;
+        margin-top: -555px;
 
         &__cta h2 {
             font-size: 1.6rem;

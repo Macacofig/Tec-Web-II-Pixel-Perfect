@@ -23,7 +23,14 @@
         }
 
         @include mixins.respond-to(mobile) {
-            display: none;
+            transform: translate(750px, -173px) scale(0.8);
+            top: 20px;
+            opacity: 0.4; 
+        }
+
+        @include mixins.respond-to(mobile-sm) {
+            transform: translate(671px, -308px) scale(0.5);
+            opacity: 0.4; 
         }
     }
 
@@ -104,7 +111,6 @@
 
     /* MOBILE */
     @include mixins.respond-to(mobile) {
-
         margin-top: -60px;
 
         &__header {
@@ -112,10 +118,12 @@
 
             h2 {
                 font-size: 1.9rem;
+                color: black;
             }
 
             p {
                 font-size: 0.95rem;
+                color: black; 
             }
         }
 
@@ -126,21 +134,23 @@
 
         &__item {
             padding: 30px 15px;
+            
             img {
                 width: 55px;
             }
 
             h3 {
                 font-size: 1.3rem;
-                color:black;
+                color: black;
             }
 
             p {
                 font-size: 0.9rem;
-                color:black;
+                color: black;
             }
         }
     }
+    
 
     /* MOBILE PEQUEÑO */
     @include mixins.respond-to(mobile-sm) {

@@ -15,15 +15,20 @@
         right: 0;
         height: 100%; 
         z-index: -1;
+        // Desktop original
         transform: translate(280px, -210px) rotate(-15deg);
 
         @include mixins.respond-to(tablet) {
-            transform: translate(150px, -150px) rotate(-15deg);
+            transform: translate(100px, -100px) rotate(0deg) scale(0.9);
         }
 
         @include mixins.respond-to(mobile) {
-            transform: translate(80px, -120px) rotate(-15deg);
-            opacity: 0.5;
+            transform: translate(50px, -65px) rotate(0deg) scale(0.8);
+            opacity: 0.4; 
+        }
+
+        @include mixins.respond-to(mobile-sm) {
+           transform: translate(157px, -7px) rotate(0deg) scale(1);
         }
     }
 
@@ -70,12 +75,12 @@
             }
         }
 
-         /* TABLET */
+        /* TABLET */
         @include mixins.respond-to(tablet) {
-            padding: 25px;
+            padding: 20px 30px; // Padding un poco más ajustado
 
             ul {
-                gap: 20px;
+                gap: 25px; // Gap un poco más grande para legibilidad
             }
 
             a {
@@ -86,25 +91,26 @@
         /* MOBILE */
         @include mixins.respond-to(mobile) {
             flex-wrap: wrap;
-            padding: 20px;
+            padding: 15px 20px; // Menos padding vertical para ahorrar espacio
 
             ul {
                 width: 100%;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 12px 18px;
-                margin-top: 10px;
+                gap: 15px 25px; // Gap horizontal más amplio para que no se toquen
+                margin-top: 0; // Quitamos margen extra
             }
 
             a {
                 font-size: 0.9rem;
+                padding: 5px 0; // Área de clic más grande
             }
         }
 
-        /* MOBILE PEQUEÑO */
+        /* MOBILE PEQUEÑO (320px - 375px) */
         @include mixins.respond-to(mobile-sm) {
             ul {
-                gap: 10px 14px;
+                gap: 10px 20px;
             }
 
             a {
@@ -117,16 +123,19 @@
         display: flex;
         align-items: center;
         padding-top: 60px;
+        gap: 40px; // Añadido gap para separar texto e imagen en desktop
 
         @include mixins.respond-to(tablet) {
             flex-direction: column;
             text-align: center;
-            gap: 40px;
+            gap: 30px;
+            padding-top: 40px; // Reducir padding en tablet
         }
     }
 
     &__text {
         flex: 1;
+        // Desktop: transform original
         transform: translate(120px, -180px);
 
         h1 {
@@ -161,8 +170,8 @@
         }
 
         @include mixins.respond-to(tablet) {
-            transform: none;
-            max-width: 600px;
+            transform: none; // Quitar transform para centrar
+            max-width: 100%; // Ocupar todo el ancho disponible
             margin: 0 auto;
 
             h1 {
@@ -177,11 +186,23 @@
 
             p {
                 font-size: 0.95rem;
+                max-width: 380px;
             }
 
             .buttons {
                 justify-content: center;
                 flex-wrap: wrap;
+                gap: 10px;
+            }
+        }
+
+        @include mixins.respond-to(mobile-sm) {
+            h1 {
+                font-size: 1.75rem; // Ajuste para pantallas muy pequeñas
+            }
+            
+            p {
+                font-size: 0.9rem;
             }
         }
     }
@@ -199,18 +220,19 @@
 
         @include mixins.respond-to(tablet) {
             justify-content: center;
-
+            
+            // Usamos display: none en lugar de visibility: hidden
+            // para que el texto no tenga que "hacer espacio" para la imagen oculta
             img {
-                transform: scale(1.1);
-                visibility: hidden;
+                display: none; 
             }
         }
 
         @include mixins.respond-to(mobile) {
+            // En móvil, si la imagen se oculta, el texto debe ocupar el 100%
+            // Esto se logra automáticamente si &__text tiene max-width: 100% en tablet
             img {
-                transform: scale(1);
-                max-width: 85%;
-                visibility: hidden;
+                display: none;
             }
         }
     }
