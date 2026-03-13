@@ -3,25 +3,29 @@
 @use 'sass:color';
 
 .screenshots {
-    padding: 80px 0;
+    // CAMBIO: Padding 100% fluido
+    padding: clamp(60px, 12vh, 100px) 0;
     text-align: center;
     background-color: variables.$white;
 
     &__header {
-        margin-bottom: 50px;
+        // CAMBIO: Margin fluido
+        margin-bottom: clamp(40px, 8vh, 60px);
 
         h2 { 
-            font-size: 2.5rem; 
+            font-size: clamp(2rem, 4.5vw, 2.8rem); 
             color: variables.$text-dark; 
             font-family:'Nunito-Bold', sans-serif;
         }
 
         p { 
             color: variables.$text-gray; 
-            max-width: 600px; 
-            margin: 10px auto; 
-            padding: 20px;
+            max-width: clamp(500px, 80%, 700px); 
+            margin: clamp(15px, 2vh, 20px) auto; 
+            padding: clamp(15px, 3vw, 25px);
             font-family: 'Rubik-normal', sans-serif;
+            // CAMBIO: Font-size fluido
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
         }
     }
 
@@ -29,36 +33,41 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        // CAMBIO: Gap fluido
+        gap: clamp(15px, 3vw, 25px);
         overflow: hidden;
 
         .phone {
-            width: 250px;
+            // PEQUEÑOS Y FLUIDOS
+            width: clamp(140px, 18vw, 220px);
             transition: all 0.3s ease;
+            height: auto; // Para mantener proporción
 
             &.side {
                 transform: scale(1);
             }
 
             &.center {
-                width: 280px;
+                width: clamp(160px, 20vw, 250px);
                 z-index: 2;
                 transform: scale(1);
-                filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+                filter: drop-shadow(0 clamp(10px, 2vw, 25px) clamp(20px, 3vw, 40px) rgba(0,0,0,0.1));
             }
         }
     }
 
     &__dots {
-        margin-top: 40px;
+        // CAMBIO: Margin fluido
+        margin-top: clamp(30px, 6vh, 50px);
 
         .dot {
-            height: 12px;
-            width: 12px;
+            // CAMBIO: Tamaños fluidos
+            height: clamp(10px, 1.5vw, 14px);
+            width: clamp(10px, 1.5vw, 14px);
             background-color: #ddd;
             border-radius: 50%;
             display: inline-block;
-            margin: 0 5px;
+            margin: 0 clamp(4px, 0.8vw, 8px);
 
             &.active { 
                 background-color: variables.$primary-blue; 
@@ -69,19 +78,20 @@
     /* TABLET */
     @include mixins.respond-to(tablet) {
 
-        padding: 70px 0;
+        padding: clamp(50px, 10vh, 80px) 0;
 
         &__header h2 {
-            font-size: 2.2rem;
+            font-size: clamp(1.9rem, 4vw, 2.4rem);
         }
 
         &__slider {
+            gap: clamp(12px, 2.5vw, 20px);
 
             .phone {
-                width: 200px;
+                width: clamp(130px, 17vw, 190px);
 
                 &.center {
-                    width: 230px;
+                    width: clamp(145px, 19vw, 220px);
                 }
             }
         }
@@ -90,53 +100,79 @@
     /* MOBILE */
     @include mixins.respond-to(mobile) {
 
-        padding: 60px 0;
+        padding: clamp(45px, 10vh, 70px) 0;
 
         &__header {
-
             h2 {
-                font-size: 2rem;
+                font-size: clamp(1.7rem, 5vw, 2.1rem);
             }
 
             p {
-                font-size: 0.95rem;
-                padding: 10px 15px;
+                font-size: clamp(0.9rem, 2.5vw, 1rem);
+                padding: clamp(10px, 3vw, 18px);
             }
         }
 
         &__slider {
-            gap: 15px;
+            gap: clamp(8px, 2.8vw, 15px);
 
             .phone {
-                width: 160px;
+                width: clamp(105px, 26vw, 140px);
 
                 &.center {
-                    width: 180px;
+                    width: clamp(115px, 28vw, 155px);
                 }
             }
         }
 
         &__dots {
-            margin-top: 30px;
+            margin-top: clamp(25px, 6vh, 35px);
 
             .dot {
-                height: 10px;
-                width: 10px;
+                height: clamp(9px, 1.8vw, 11px);
+                width: clamp(9px, 1.8vw, 11px);
             }
         }
     }
 
-    /* MOBILE PEQUEÑO */
+    /* MOBILE PEQUEÑO (443px y abajo) - SÚPER RESPONSIVO */
     @include mixins.respond-to(mobile-sm) {
 
+        padding: clamp(35px, 10vh, 55px) 0;
+
+        &__header {
+            margin-bottom: clamp(25px, 7vh, 45px);
+
+            h2 {
+                font-size: clamp(1.5rem, 6vw, 1.9rem);
+            }
+
+            p {
+                font-size: clamp(0.85rem, 3.2vw, 0.95rem);
+                padding: clamp(8px, 3.5vw, 15px);
+            }
+        }
+
         &__slider {
+            gap: clamp(6px, 2.5vw, 12px);
 
             .phone {
-                width: 130px;
+                // SÚPER PEQUEÑOS Y PERFECTAMENTE FLUIDOS
+                width: clamp(90px, 30vw, 125px);
 
                 &.center {
-                    width: 150px;
+                    width: clamp(100px, 32vw, 140px);
                 }
+            }
+        }
+
+        &__dots {
+            margin-top: clamp(18px, 5vh, 28px);
+
+            .dot {
+                height: clamp(8px, 2vw, 10px);
+                width: clamp(8px, 2vw, 10px);
+                margin: 0 clamp(3px, 1vw, 5px);
             }
         }
     }
